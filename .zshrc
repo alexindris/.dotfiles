@@ -69,6 +69,7 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 alias pa='source /Users/alex/Documents/Enviroments/joey/bin/activate'
+alias git-clean="git fetch --all -p; git branch -vv | grep ': gone]' | awk '{ print \$1 }' | xargs -r -n 1 git branch -D"
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -88,4 +89,10 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="/usr/local/bin:$PATH"
+
+
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export APPLE_ID="alexindris22@gmail.com"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
